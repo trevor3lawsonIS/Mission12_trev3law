@@ -326,10 +326,10 @@ const teamInfo = [
 ]
 
 function Welcome(){
-  return(<h1>This site lists out information for colleges in NCAA Basketball!</h1>);
+  return(<div><h1>This site lists out information for colleges in NCAA Basketball!</h1><br></br></div>);
 }
 
-class Team extends React.Component {
+class Team extends React.Component <{school:string;name:string;city:string;state:string}>{
   render(){
     
     const oneTeam = this.props;
@@ -338,6 +338,7 @@ class Team extends React.Component {
     <div>
         <h2>{oneTeam.school} {oneTeam.name}</h2>
         <h3>{oneTeam.city}, {oneTeam.state}</h3>
+        <br></br>
     </div>    
     );
   }
